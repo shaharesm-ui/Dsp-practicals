@@ -1,0 +1,30 @@
+# Student Data System
+# Understanding Python building blocks, data types and basic input-output operations
+
+print("===== STUDENT DATA SYSTEM =====")
+
+# Taking input from the user
+name = input("Enter student name: ")
+age = int(input("Enter student age: "))
+roll_no = int(input("Enter roll number: "))
+course = input("Enter course: ")
+marks = float(input("Enter marks: "))
+passed = marks >= 40
+
+# Displaying student data
+print("\n===== STUDENT DETAILS =====")
+print("Name:", name)
+print("Age:", age)
+print("Roll Number:", roll_no)
+print("Course:", course)
+print("Marks:", marks)
+print("Pass Status:", passed)
+
+# Displaying data types
+print("\n===== DATA TYPES =====")
+print("Name data type:", type(name))
+print("Age data type:", type(age))
+print("Roll Number data type:", type(roll_no))
+print("Course data type:", type(course))
+print("Marks data type:", type(marks))
+print("Pass Status data type:", type(passed))
