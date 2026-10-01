@@ -1,0 +1,69 @@
+# Program to perform operations on Tuple, Set and Dictionary
+
+# ---------------- TUPLE ----------------
+print("===== TUPLE OPERATIONS =====")
+
+my_tuple = (10, 20, 30, 40, 50)
+
+print("Original Tuple:", my_tuple)
+print("First element:", my_tuple[0])
+print("Last element:", my_tuple[-1])
+print("Length of Tuple:", len(my_tuple))
+print("Count of 20:", my_tuple.count(20))
+print("Index of 30:", my_tuple.index(30))
+print("Tuple slicing:", my_tuple[1:4])
+
+
+# ---------------- SET ----------------
+print("\n===== SET OPERATIONS =====")
+
+set1 = {10, 20, 30, 40}
+set2 = {30, 40, 50, 60}
+
+print("Set 1:", set1)
+print("Set 2:", set2)
+
+print("Union:", set1.union(set2))
+print("Intersection:", set1.intersection(set2))
+print("Difference:", set1.difference(set2))
+
+set1.add(70)
+print("After adding 70:", set1)
+
+set1.remove(70)
+print("After removing 70:", set1)
+
+
+# ---------------- DICTIONARY ----------------
+print("\n===== DICTIONARY OPERATIONS =====")
+
+student = {
+    "Name": "Rahul",
+    "Age": 20,
+    "Course": "BDS",
+    "Marks": 85
+}
+
+print("Original Dictionary:", student)
+
+# Accessing values
+print("Student Name:", student["Name"])
+print("Student Marks:", student["Marks"])
+
+# Adding a new key-value pair
+student["City"] = "Nagpur"
+print("After adding City:", student)
+
+# Updating a value
+student["Marks"] = 90
+print("After updating Marks:", student)
+
+# Removing a key-value pair
+student.pop("City")
+print("After removing City:", student)
+
+# Built-in dictionary functions
+print("Keys:", student.keys())
+print("Values:", student.values())
+print("Items:", student.items())
+print("Length of Dictionary:", len(student))
