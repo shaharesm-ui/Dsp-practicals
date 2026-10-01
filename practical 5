@@ -1,0 +1,25 @@
+# Program to use user-defined and built-in Python modules
+
+import my_module
+import math
+
+print("===== USER-DEFINED MODULE =====")
+
+a = 10
+b = 5
+
+print("Addition:", my_module.add(a, b))
+print("Square of 5:", my_module.square(b))
+print("Cube of 5:", my_module.cube(b))
+
+
+print("\n===== BUILT-IN MATH MODULE =====")
+
+number = 25
+
+print("Square root:", math.sqrt(number))
+print("Power:", math.pow(2, 3))
+print("Ceiling of 4.6:", math.ceil(4.6))
+print("Floor of 4.6:", math.floor(4.6))
+print("Value of Pi:", math.pi)
+print("Factorial of 5:", math.factorial(5))
