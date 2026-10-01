@@ -1,0 +1,157 @@
+# Program to implement Singly, Doubly and Circular Linked Lists
+
+# =========================================================
+# 1. SINGLY LINKED LIST
+# =========================================================
+
+class SinglyNode:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, data):
+        new_node = SinglyNode(data)
+
+        if self.head is None:
+            self.head = new_node
+        else:
+            temp = self.head
+
+            while temp.next:
+                temp = temp.next
+
+            temp.next = new_node
+
+    def display(self):
+        temp = self.head
+
+        while temp:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+
+        print("None")
+
+
+print("===== SINGLY LINKED LIST =====")
+
+singly = SinglyLinkedList()
+
+singly.insert(10)
+singly.insert(20)
+singly.insert(30)
+
+print("Singly Linked List:")
+singly.display()
+
+
+# =========================================================
+# 2. DOUBLY LINKED LIST
+# =========================================================
+
+class DoublyNode:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, data):
+        new_node = DoublyNode(data)
+
+        if self.head is None:
+            self.head = new_node
+        else:
+            temp = self.head
+
+            while temp.next:
+                temp = temp.next
+
+            temp.next = new_node
+            new_node.prev = temp
+
+    def display(self):
+        temp = self.head
+
+        while temp:
+            print(temp.data, end=" <-> ")
+            temp = temp.next
+
+        print("None")
+
+
+print("\n===== DOUBLY LINKED LIST =====")
+
+doubly = DoublyLinkedList()
+
+doubly.insert(10)
+doubly.insert(20)
+doubly.insert(30)
+
+print("Doubly Linked List:")
+doubly.display()
+
+
+# =========================================================
+# 3. CIRCULAR LINKED LIST
+# =========================================================
+
+class CircularNode:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, data):
+        new_node = CircularNode(data)
+
+        if self.head is None:
+            self.head = new_node
+            new_node.next = self.head
+        else:
+            temp = self.head
+
+            while temp.next != self.head:
+                temp = temp.next
+
+            temp.next = new_node
+            new_node.next = self.head
+
+    def display(self):
+        if self.head is None:
+            return
+
+        temp = self.head
+
+        while True:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+
+            if temp == self.head:
+                break
+
+        print("(Back to Head)")
+
+
+print("\n===== CIRCULAR LINKED LIST =====")
+
+circular = CircularLinkedList()
+
+circular.insert(10)
+circular.insert(20)
+circular.insert(30)
+
+print("Circular Linked List:")
+circular.display()
