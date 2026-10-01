@@ -1,0 +1,50 @@
+# Program to perform array creation, indexing, slicing,
+# reshaping and mathematical operations using NumPy
+
+import numpy as np
+
+print("===== ARRAY CREATION =====")
+
+arr = np.array([10, 20, 30, 40, 50, 60])
+print("Original Array:", arr)
+
+print("\n===== INDEXING =====")
+
+print("First element:", arr[0])
+print("Third element:", arr[2])
+print("Last element:", arr[-1])
+
+print("\n===== SLICING =====")
+
+print("First three elements:", arr[:3])
+print("Elements from index 2 to 4:", arr[2:5])
+print("Every second element:", arr[::2])
+
+print("\n===== RESHAPING =====")
+
+arr2 = np.array([1, 2, 3, 4, 5, 6])
+print("Original Array:", arr2)
+
+reshaped_arr = arr2.reshape(2, 3)
+print("Reshaped Array (2x3):")
+print(reshaped_arr)
+
+print("\n===== MATHEMATICAL OPERATIONS =====")
+
+a = np.array([10, 20, 30])
+b = np.array([2, 4, 5])
+
+print("Array A:", a)
+print("Array B:", b)
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+
+print("Square of A:", np.square(a))
+print("Square Root of A:", np.sqrt(a))
+print("Sum of A:", np.sum(a))
+print("Mean of A:", np.mean(a))
+print("Maximum of A:", np.max(a))
+print("Minimum of A:", np.min(a))
